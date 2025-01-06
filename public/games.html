@@ -4,27 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MUFArcade</title>
     <link rel="stylesheet" href="css/eye.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="bg-[#252524]">
 
-    <h1>MUFArcade</h1>
-    <p>MUFArcade adalah platform website yang menyediakan berbagai classic & fun game</p>
-    <div class="eye-container">
-        <div class="eye">
-            <div class="pupil"></div>
-        </div>
-        <div class="eye">
-            <div class="pupil"></div>
+    <img src="assets/logoHero.png" alt="" class="w-[300px] h-auto my-8 ml-8 cursor-pointer" onclick="openModal()">
+
+    <!-- Modal -->
+    <div id="modal" class="modal backdrop-blur-md w-full h-screen fixed top-0 left-0 z-50 hidden">
+        <div
+            class="p-6 bg-gradient-to-br from-green-400 via-green-500 to-yellow-400 w-[90%] max-w-2xl h-auto rounded-lg shadow-2xl relative m-auto top-[15%] md:top-[25%] scale-95 transition-transform duration-300 ease-in-out">
+
+            <div class="text-center">
+                <!-- Ikon Bertema Game -->
+                <div class="flex justify-center mb-4">
+                    <img src="assets/joystick.png" alt="Joystick Icon" class="w-12 h-12 animate-bounce">
+                </div>
+
+                <!-- Mata Bertema Games -->
+                <div class="eye-container flex justify-center mb-4">
+                    <div class="eye mx-2">
+                        <div class="pupil"></div>
+                    </div>
+                    <div class="eye mx-2">
+                        <div class="pupil"></div>
+                    </div>
+                </div>
+
+                <!-- Deskripsi -->
+                <p class="text-white font-bold text-lg mb-6">
+                    Selamat datang di <span class="text-yellow-200">MUFArcade</span>! Platform yang menghadirkan beragam <span
+                        class="text-green-200">classic</span> & <span class="text-green-300">fun games</span>.
+                </p>
+
+                <!-- Tombol -->
+                <button onclick="closeModal()"
+                    class="bg-green-600 text-white py-3 px-8 rounded-lg shadow-md hover:bg-green-700 hover:shadow-xl transition-all transform hover:scale-105">
+                    Main Sekarang!
+                </button>
+            </div>
+
+            <!-- Efek Visual Dekorasi -->
+            <div class="absolute w-16 h-16 bg-green-500 rounded-full opacity-50 blur-xl top-[-20px] left-[20px]"></div>
+            <div class="absolute w-32 h-32 bg-yellow-400 rounded-full opacity-50 blur-xl bottom-[-40px] right-[20px]"></div>
         </div>
     </div>
 
-   
-
     <script src="js/eye.js"></script>
-
+    <script>
+        function openModal() {
+            const modal = document.getElementById("modal");
+            modal.style.display = "block";
+            modal.classList.add("scale-100");
+        }
+        function closeModal() {
+            const modal = document.getElementById("modal");
+            modal.style.display = "none";
+            modal.classList.remove("scale-100");
+        }
+    </script>
 
 </body>
 
