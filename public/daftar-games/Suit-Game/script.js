@@ -19,7 +19,7 @@ pGajah.addEventListener('click', function(){
     const hasil = getHasil(pilihanComputer, pilihanPlayer);
 
     const imgComputer = document.querySelector('.img-komputer');
-    imgComputer.setAttribute('src', '../../Multimedia/' + pilihanComputer +'.png');
+    imgComputer.setAttribute('src', '../../assets/' + pilihanComputer +'.png');
 
     const info = document.querySelector('.info');
     info.innerHTML = hasil;
@@ -37,7 +37,7 @@ function putar(){
             clearInterval;
             return;
         }
-        imgComputer.setAttribute('src', '../../Multimedia/' + gambar[i++] + '.png')
+        imgComputer.setAttribute('src', '../../assets/' + gambar[i++] + '.png')
         if(i ==gambar.length) i = 0
     }, 100)
 }
@@ -54,7 +54,7 @@ pilihan.forEach(function(pil){
 
     setTimeout(function(){
         const imgComputer = document.querySelector('.img-komputer');
-    imgComputer.setAttribute('src', '../../Multimedia/' + pilihanComputer +'.png');
+    imgComputer.setAttribute('src', '../../assets/' + pilihanComputer +'.png');
 
     const info = document.querySelector('.info');
     info.innerHTML = hasil;
