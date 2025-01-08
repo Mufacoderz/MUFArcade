@@ -148,3 +148,19 @@ img {
 .gajah:active, .semut:active, .orang:active {
     top: 2px;
 }
+
+.keluar{
+    position:absolute;
+    top: 20px;
+    left: 20px;
+    background-color: blue;
+    padding: 10px;
+    border-radius:10px;
+    color: white;
+    transition: 0.5s;
+  }
+  .keluar:hover{
+    background-color: yellow;
+    color: black;
+    cursor: pointer;
+  }

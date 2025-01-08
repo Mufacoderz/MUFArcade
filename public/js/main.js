@@ -9,3 +9,9 @@ const games = [
       window.location.href = game.url;
     });
   });
+
+  function openMenu() {
+    window.location.href = '../../games.html';
+  }
+
+  document.getElementById('openMenu').addEventListener('click', openMenu);
