@@ -32,3 +32,35 @@ body {
     color: black;
     cursor: pointer;
   }
+
+  #controls {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+    grid-gap: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #controls button {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #controls button:active {
+    background-color: yellow;
+    color: black;
+  }
+  
+  /* Tombol kosong untuk membuat bentuk panah */
+  #controls .empty {
+    visibility: hidden;
+  }
+  
+  

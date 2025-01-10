@@ -100,3 +100,26 @@ function draw() {
 
 // Call draw function every 100 ms
 let game = setInterval(draw, 200);
+
+// Tombol navigasi
+const upButton = document.getElementById("up");
+const downButton = document.getElementById("down");
+const leftButton = document.getElementById("left");
+const rightButton = document.getElementById("right");
+
+// Event listener untuk tombol navigasi
+upButton.addEventListener("click", () => {
+  if (direction !== "DOWN") direction = "UP";
+});
+
+downButton.addEventListener("click", () => {
+  if (direction !== "UP") direction = "DOWN";
+});
+
+leftButton.addEventListener("click", () => {
+  if (direction !== "RIGHT") direction = "LEFT";
+});
+
+rightButton.addEventListener("click", () => {
+  if (direction !== "LEFT") direction = "RIGHT";
+});
